@@ -14,7 +14,7 @@ type FormVlaue = {
   password: string;
 };
 
-const Login = () => {
+const LoginSmall = () => {
   const [showPassword, setShowPassword] = useState(false);
   const notify = () => toast("login successfully!");
 
@@ -41,31 +41,30 @@ const Login = () => {
   return (
     <>
       <>
-        <div className="hidden md:flex ">
-          <div className="md:flex-1 md:flex md:justify-center md:items-center h-[700px] w-full">
+        <div className="md:hidden relative ">
+          <div className="w-full h-full ">
             <Image
               src={OldMan}
               alt=""
               width={500}
               height={500}
-              className="w-full h-full object-fill"
+              className="w-full h-screen opacity-70"
             />
           </div>
-          <div className="md:flex-1 md:flex md:justify-center md:items-center md:my-5 lg:flex lg:justify-center lg:items-center lg:my-5 xl:my-0 xl:flex xl:justify-center xl:items-center ">
-            <form
-              className=" md:w-[330px] md:h-[545px] xl:w-[430px] xl:h-[545px] 2xl:w-[430px] 2xl:h-[545px]"
-              onSubmit={handleSubmit(onSubmit)}>
-              <div className="xl:h-[144px] 2xl:h-[144px]">
-                <h1 className="font-normal md:text-[24px] lg:text-[30px] xl:text-[40px]">
-                  Welcome Back <br /> to{" "}
-                  <span className="font-semibold">[Company Name]</span> <br />
+          <div className="absolute top-32 left-10 sm:left-36 back  backdrop-blur-md p-5 rounded-md shadow-sm border ">
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <div className="text-center">
+                <h1 className="text-lg">
+                  Welcome Back to{" "}
+                  <span className="font-semibold">[Company Name]</span>
+                  <br />
                   Log in to Your Account
                 </h1>
               </div>
-              <div className="md:mt-5 xl:mt-14 ">
-                <div className="flex flex-col gap-5">
+              <div className="my-5">
+                <div className="flex flex-col gap-3">
                   <div className="flex flex-col gap-1">
-                    <label htmlFor="email" className="xl:text-lg">
+                    <label htmlFor="email" className="text-[14px]">
                       Email ID / Username
                     </label>
                     <TextField
@@ -83,13 +82,13 @@ const Login = () => {
                       })}
                     />
                     {errors.email && (
-                      <p className="error-msg text-red-500">
+                      <p className="error-msg text-red-500 text-[10px]">
                         {errors.email.message}
                       </p>
                     )}
                   </div>
                   <div className="flex flex-col gap-1">
-                    <label htmlFor="password" className="xl:text-lg">
+                    <label htmlFor="password" className="text-[14px]">
                       Password
                     </label>
                     <TextField
@@ -132,18 +131,18 @@ const Login = () => {
                       })}
                     />
                     {errors.password && (
-                      <p className="error-msg text-red-500">
+                      <p className="error-msg text-red-500 text-[10px]">
                         {errors.password.message}
                       </p>
                     )}
                   </div>
                 </div>
-                <div className="flex justify-end my-2">
-                  <p className="cursor-pointer text-[#196FE1] underline text-sm xl:text-lg">
+                <div>
+                  <p className="cursor-pointer text-[#196FE1] underline text-[12px] my-3">
                     Forget password?
                   </p>
                 </div>
-                <div className="my-10">
+                <div>
                   <Button
                     type="submit"
                     color="primary"
@@ -158,10 +157,9 @@ const Login = () => {
             </form>
           </div>
         </div>
-        <ToastContainer />
       </>
     </>
   );
 };
 
-export default Login;
+export default LoginSmall;
