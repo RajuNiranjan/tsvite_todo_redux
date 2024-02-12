@@ -1,7 +1,12 @@
+import Login from "@/components/login";
 import React from "react";
 
 const Page = () => {
-  return <div>Page</div>;
+  return (
+    <div className="container m-auto">
+      <Login />
+    </div>
+  );
 };
 
 export default Page;
