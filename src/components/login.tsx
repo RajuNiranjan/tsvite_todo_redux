@@ -63,7 +63,7 @@ const Login = () => {
                 </h1>
               </div>
               <div className="md:mt-5 xl:mt-14 ">
-                <div className="flex flex-col gap-5">
+                <div className="flex flex-col gap-4">
                   <div className="flex flex-col gap-1">
                     <label htmlFor="email" className="xl:text-lg">
                       Email ID / Username
@@ -139,18 +139,18 @@ const Login = () => {
                   </div>
                 </div>
                 <div className="flex justify-end my-2">
-                  <p className="cursor-pointer text-[#196FE1] underline text-sm xl:text-lg">
+                  <p className="cursor-pointer text-[#196FE1] underline text-sm xl:text-md">
                     Forget password?
                   </p>
                 </div>
-                <div className="my-10">
+                <div className="my-6">
                   <Button
                     type="submit"
                     color="primary"
                     variant="contained"
                     fullWidth
-                    className="text-white bg-blue-600  font-semibold  xl:text-xl rounded-lg
-                  lg:py-2 xl:py-3">
+                    className="text-white bg-blue-600  font-semibold  xl:text-lg rounded-lg
+                  lg:py-2 xl:py-2">
                     LOG IN
                   </Button>
                 </div>

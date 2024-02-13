@@ -55,16 +55,18 @@ const LoginSmall = () => {
             <div className="backdrop-blur p-5 sm border rounded-md shadow-xl w-[350px]">
               <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="text-center">
-                  <h1 className="text-lg">
+                  <h1 className="text-md">
                     Welcome Back to{" "}
-                    <span className="font-semibold">[Company Name]</span>
+                    <span className="font-semibold text-xl">
+                      [Company Name]
+                    </span>
                     <br />
                     Log in to Your Account
                   </h1>
                 </div>
-                <div className="my-5">
+                <div className="my-4">
                   <div className="flex flex-col gap-3">
-                    <div className="flex flex-col gap-1">
+                    <div className="flex flex-col">
                       <label htmlFor="email" className="text-[14px]">
                         Email ID / Username
                       </label>
@@ -83,12 +85,12 @@ const LoginSmall = () => {
                         })}
                       />
                       {errors.email && (
-                        <p className="error-msg text-red-500 text-[10px]">
+                        <p className="error-msg text-red-500 text-[12px]">
                           {errors.email.message}
                         </p>
                       )}
                     </div>
-                    <div className="flex flex-col gap-1">
+                    <div className="flex flex-col">
                       <label htmlFor="password" className="text-[14px]">
                         Password
                       </label>
@@ -104,9 +106,9 @@ const LoginSmall = () => {
                               position="end"
                               onClick={toggleShowPassword}>
                               {showPassword ? (
-                                <RemoveRedEyeOutlinedIcon className="cursor-pointer" />
+                                <RemoveRedEyeOutlinedIcon className="cursor-pointer text-slate-700" />
                               ) : (
-                                <VisibilityOffOutlinedIcon className="cursor-pointer" />
+                                <VisibilityOffOutlinedIcon className="cursor-pointer text-slate-700" />
                               )}
                             </InputAdornment>
                           ),
@@ -132,7 +134,7 @@ const LoginSmall = () => {
                         })}
                       />
                       {errors.password && (
-                        <p className="error-msg text-red-500 text-[10px]">
+                        <p className="error-msg text-red-500 text-[12px]">
                           {errors.password.message}
                         </p>
                       )}
@@ -149,8 +151,7 @@ const LoginSmall = () => {
                       color="primary"
                       variant="contained"
                       fullWidth
-                      className="text-white bg-blue-600  font-semibold  xl:text-xl rounded-lg
-                  lg:py-2 xl:py-3">
+                      className="text-white bg-blue-600 text-sm  font-semibold rounded-lg py-3">
                       LOG IN
                     </Button>
                   </div>
