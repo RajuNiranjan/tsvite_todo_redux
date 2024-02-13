@@ -42,7 +42,7 @@ const Login = () => {
     <>
       <>
         <div className="hidden md:flex ">
-          <div className="md:flex-1 md:flex md:justify-center md:items-center h-[700px] w-full">
+          <div className="md:flex-1 md:flex md:justify-center md:items-center  w-full">
             <Image
               src={OldMan}
               alt=""
@@ -51,7 +51,7 @@ const Login = () => {
               className="w-full h-full object-fill"
             />
           </div>
-          <div className="md:flex-1 md:flex md:justify-center md:items-center md:my-5 lg:flex lg:justify-center lg:items-center lg:my-5 xl:my-0 xl:flex xl:justify-center xl:items-center ">
+          <div className="md:flex-1 md:flex md:justify-center md:mt-10 md:my-5 lg:flex lg:justify-center lg:mt-10 lg:my-5 xl:my-0 xl:flex xl:justify-center xl:mt-20">
             <form
               className=" md:w-[330px] md:h-[545px] xl:w-[430px] xl:h-[545px] 2xl:w-[430px] 2xl:h-[545px]"
               onSubmit={handleSubmit(onSubmit)}>
